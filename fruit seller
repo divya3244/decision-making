@@ -1,0 +1,30 @@
+ A fruit seller buys a dozen of banana at Rs.X. He sells 1 banana at Rs.Y. Write a program to determine the profit or loss in Rs. for the fruitseller.
+Input format:
+Input consists of 2 floating point numbers
+The first input corresponds to the total cost(X)
+The second input corresponds to the sold cost(Y)
+Output format:
+Print "Profit or Loss" with Rupees.
+Sample Input:
+60
+4
+Sample Output:
+Loss : Rs.12.00
+
+
+answer:
+
+total_cost = float(input("Enter the total cost (Rs.): "))
+sold_cost = float(input("Enter the sold cost per banana (Rs.): "))
+cost_per_banana = total_cost / 12
+if sold_cost > cost_per_banana:
+    profit = (sold_cost - cost_per_banana) * 12
+    print(f"Profit : Rs.{profit:.2f}")
+else:
+    loss = (cost_per_banana - sold_cost) * 12
+    print(f"Loss : Rs.{loss:.2f}")
+
+output:
+Enter the total cost (Rs.):  50
+Enter the sold cost per banana (Rs.):  10
+Profit : Rs.70.00
